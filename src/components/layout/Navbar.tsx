@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
-  { name: "Projects", path: "/projects" },
+  { name: "Case Studies", path: "/case-studies" },
   { name: "Portfolio", path: "/portfolio" },
   { name: "About", path: "/about" },
   { name: "Careers", path: "/careers" },
@@ -37,7 +37,7 @@ export function Navbar() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-soft py-3"
-          : "bg-transparent py-5"
+          : "bg-transparent py-5",
       )}
     >
       <nav className="container-wide flex items-center justify-between">
@@ -63,7 +63,7 @@ export function Navbar() {
                 "link-underline text-sm font-medium transition-colors duration-200",
                 location.pathname === link.path
                   ? "text-accent"
-                  : "text-muted-foreground hover:text-accent"
+                  : "text-muted-foreground hover:text-accent",
               )}
             >
               {link.name}
@@ -97,7 +97,7 @@ export function Navbar() {
           "fixed inset-0 z-40 bg-black/40 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
           isMobileMenuOpen
             ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+            : "opacity-0 pointer-events-none",
         )}
         onClick={() => setIsMobileMenuOpen(false)}
       />
@@ -105,7 +105,7 @@ export function Navbar() {
       <div
         className={cn(
           "fixed top-0 right-0 z-50 h-screen w-[85%] max-w-sm bg-background shadow-2xl transition-transform duration-300 ease-out lg:hidden",
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
         <div className="flex items-center justify-between px-6 py-5 border-b border-border">
@@ -129,7 +129,7 @@ export function Navbar() {
                 "flex items-center justify-between rounded-xl px-4 py-3 text-base font-medium transition-all",
                 location.pathname === link.path
                   ? "bg-accent/10 text-accent"
-                  : "text-foreground hover:bg-muted"
+                  : "text-foreground hover:bg-muted",
               )}
             >
               {link.name}

@@ -8,6 +8,7 @@ const featuredProjects = [
     id: 1,
     title: "Amorra AI Companion App",
     category: "AI / Mental Wellness",
+    caseStudy: "amora",
     description:
       "A privacy-focused AI companion app providing emotional support, personalized conversations, and daily suggestions for users aged 50+.",
     image:
@@ -18,6 +19,7 @@ const featuredProjects = [
     id: 2,
     title: "Applicant Tracking System (ATS)",
     category: "HR Tech / Recruitment",
+    caseStudy: "ats",
     description:
       "A role-based recruitment management system built with Flutter Web and Firebase, enabling job postings, application tracking, and document validation workflows.",
     image:
@@ -34,6 +36,7 @@ const featuredProjects = [
     id: 3,
     title: "Elegant Advisors Web App",
     category: "Business Website",
+    caseStudy: "elegant-advisor",
     description:
       "A Flutter web application designed to provide an elegant online showcase for the Elegant Advisors platform.",
     image:
@@ -92,7 +95,10 @@ export function ProjectsPreview() {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               {/* Image */}
-              <Link to={"/portfolio"} className="group block">
+              <Link
+                to={`/case-studies/${project.caseStudy}`}
+                className="group block"
+              >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={project.image}
